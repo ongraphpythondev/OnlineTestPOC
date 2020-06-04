@@ -12,17 +12,6 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
         style={'input_type': 'password'}, write_only=True
     )
-    # password_confirm = serializers.CharField(
-    #     style={'input_type': 'password'}, write_only=True
-    # )
-
-    # def validate_password(self, password):
-    #     print('>>>>>>>>>>>>>>>>>>>>>>>>>>')
-    #     print(self.data)
-    #     print('>>>>>>>>>>>>>>>>>>>>>>>>>>')
-    #     if password is not self.password_confirm:
-    #         raise serializers.ValidationError("Passwords must match")
-    #     return password
 
     class Meta:
         model = User
